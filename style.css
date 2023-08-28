@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background:url("./giphy.gif");
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+/* Navbar */
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    background-color: #5603AD;
+    opacity: 0.9;
+    color: aliceblue;
+}
+
+nav ul li{
+    padding: 0 1vw;
+    font-size: 2.5vh;
+}
+.logo img{
+    height: 3vh;
+    width: 8vh;
+}
+
+
+/* Main */
+
+.container{
+    min-height: 70vh;
+    font-family: 'Varela Round', sans-serif;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+    width: 80vw;
+    margin-left: 10vw;
+    padding: 2vh;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-image: url(./BAG.png);
+    background-size: 80vw 70vh;   
+}
+
+.song-list{
+    height: 65vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.song-list h1{
+    font-size: 2.5vw;
+}
+
+.songItemContainer{
+    width: 75vw;
+    display: flex;    
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.songItem{
+    height:5vh;
+    display: flex;
+    width: 38vw;
+    background-color: aliceblue;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1.5vw;
+    border-radius: 8px;
+}
+
+.songItem img{
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+}
+
+
+.songName{
+    width: 15vw;
+    display: flex;
+    justify-content: left;
+}
+
+
+
+.Play{
+    cursor: pointer;
+    width: 10vh;
+    border: 1px solid black;
+    padding: 0.3vh 1.5vw;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* bottom */
+
+.bottom{   
+    position: sticky;
+    bottom: 0;
+    height: 14vh;
+    background-color: #5603AD;
+    opacity: 0.9;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+.bottom icons {
+    color: aliceblue;
+}
+
+.button{  
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songInfo{
+    font-family: 'Varela Round', sans-serif;
+    background-color: black;
+    color: white;
+    font-size: 1.5vh;
+    padding: 0.5vh 1vw;
+    border: 2px solid whitesmoke;
+    border-radius: 2vh;
+    display: flex;
+    gap:2vh;
+    align-items: center;
+}
+
+.gify{
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+
+#masterPlay{
+    cursor: pointer;
+    height: 40px;
+    width: 10vh;
+    padding: 0.2vh 1vw;
+    margin:0px 2px;
+    background: black;
+    border: 2px solid whitesmoke;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time{
+    width: 10vh;
+    background-color: black;
+    font-size: 2vh;
+    padding: 0.6vh 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid whitesmoke;
+    border-radius: 2vh;
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width:900px){
+    .container{
+        background:black;
+    }
+
+    .container h1{
+        font-size: 3vh;
+    }
+    .songItemContainer{
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .songItem{
+        width: 60vw;
+        font-size: 2vw;
+    }
+
+    .button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .icons div{
+        border:0.5px solid white;
+        width: 6vh;
+    }
+    
+    .songInfo{
+        font-size: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:0.5px solid white;
+    }
+
+    #time{
+        width: 10vh;
+        padding: 0 4px;
+    }
+}
